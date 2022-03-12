@@ -11,7 +11,7 @@ module.exports = {
 
   // entry files
   entry: [
-    "./src/index.js", // react
+    "./src/index.tsx", // react
   ],
 
   // output files and chunks
@@ -31,6 +31,11 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        loader: "ts-loader",
       },
     ],
   },
@@ -63,7 +68,7 @@ module.exports = {
   // resolve files configuration
   resolve: {
     // file extensions
-    extensions: [".js", ".jsx", ".scss"],
+    extensions: [".tsx", ".ts", ".js", ".jsx", ".scss"],
   },
 
   // webpack optimizations
