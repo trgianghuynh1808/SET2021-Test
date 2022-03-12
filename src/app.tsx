@@ -1,11 +1,14 @@
 import * as React from "react";
-import styles from "./styles.module.scss";
+import { Provider } from "mobx-react";
+import { rootStore } from "./stores";
+
+import MainContent from "./components/MainContent";
 
 const App = () => {
   return (
-    <div className={styles.container}>
-      <h1>Hello world</h1>
-    </div>
+    <Provider {...rootStore}>
+      <MainContent />
+    </Provider>
   );
 };
 
