@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 const App = () => {
   return (
     <div className={styles.container}>
-      <h3>Hello world</h3>
+      <h1>Hello world</h1>
     </div>
   );
 };
